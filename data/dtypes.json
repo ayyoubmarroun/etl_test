@@ -1,0 +1,9 @@
+{
+    "InvoiceNo": "str",
+    "StockCode": "str",
+    "Description": "str",
+    "Quantity": "int",
+    "InvoiceDate": "str",
+    "UnitPrice": "float",
+    "Country": "str"
+}

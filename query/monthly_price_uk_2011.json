@@ -1,0 +1,14 @@
+[
+  {
+    "$group": {
+      "_id": {
+        "country": "$Country",
+        "year": { "$year": "$InvoiceDate" },
+        "month": { "$month": "$InvoiceDate" }
+      },
+      "price": { "$sum": { "$multiply": ["$UnitPrice", "$Quantity"] } }
+    }
+  },
+  { "$match": { "_id.year": 2011, "_id.country": "United Kingdom" } },
+  { "$sort": { "_id.month": 1 } }
+]
